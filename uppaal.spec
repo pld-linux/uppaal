@@ -6,7 +6,7 @@ License:	free for non-profit (non-distributable)
 Group:		Development/Tools
 # http://www.docs.uu.se/docs/rtmv/uppaal/download.html
 Source0:	uppaal2k.zip
-# Source0-md5:	567d0ea89e0965e633ee0ce7d1987d42
+# NoSource0-md5:	567d0ea89e0965e633ee0ce7d1987d42
 NoSource:	0
 URL:		http://www.docs.uu.se/docs/rtmv/uppaal/
 Requires:	jre > 1.4
