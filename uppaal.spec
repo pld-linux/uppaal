@@ -1,4 +1,5 @@
-Summary:	Integrated tool environment for modeling, simulation and verification of real-time systems
+Summary:	Environment for modeling, simulation and verification of real-time systems
+Summary(pl):	¦rodowisko do modelowania, symulacji i weryfikacji systemów czasu rzeczywistego
 Name:		uppaal
 Version:	3.4.3
 Release:	0.1
@@ -14,13 +15,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Uppaal is an integrated tool environment for modeling, validation and
-verification of real-time systems modeled as networks of timed automata,
-extended with data types (bounded integers, arrays, etc.).
+verification of real-time systems modeled as networks of timed
+automata, extended with data types (bounded integers, arrays, etc.).
+
+%description -l pl
+Uppaal to zintegrowane ¶rodowisko narzêdzi do modelowania, sprawdzania
+poprawno¶ci i weryfikacji systemów czasu rzeczywistego modelowanych
+jako sieci automatów czasowych, rozszerzonych o typy danych
+(ograniczone liczby ca³kowite, tablice itp.).
 
 %prep
 %setup -q
-
-%build
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -31,7 +36,7 @@ install man/man1/* $RPM_BUILD_ROOT%{_mandir}/man1
 install uppaal2k.jar $RPM_BUILD_ROOT%{_libdir}/%{name}
 install demo/* $RPM_BUILD_ROOT%{_libdir}/%{name}/demo
 install lib/* $RPM_BUILD_ROOT%{_libdir}/%{name}/lib
-install bin-Linux/* $RPM_BUILD_ROOT%{_libdir}/%{name}/bin-Linux/
+install bin-Linux/* $RPM_BUILD_ROOT%{_libdir}/%{name}/bin-Linux
 
 cat <<EOF >$RPM_BUILD_ROOT%{_bindir}/uppaal
 #!/bin/sh
