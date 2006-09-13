@@ -1,17 +1,17 @@
 Summary:	Environment for modeling, simulation and verification of real-time systems
 Summary(pl):	¦rodowisko do modelowania, symulacji i weryfikacji systemów czasu rzeczywistego
 Name:		uppaal
-Version:	3.4.3
+Version:	4.0.2
 Release:	0.1
 License:	free for non-profit (non-distributable)
 Group:		Development/Tools
 # http://www.docs.uu.se/docs/rtmv/uppaal/download.html
-Source0:	uppaal2k.zip
-# NoSource0-md5:	567d0ea89e0965e633ee0ce7d1987d42
+Source0:	%{name}-%{version}.zip
+# NoSource0-md5:	6698f31403a6543d850e43d4a85025f4
 NoSource:	0
 URL:		http://www.uppaal.com/
 BuildRequires:	unzip
-Requires:	jre > 1.4
+Requires:	jre > 1.5
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,7 +34,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir}/%{name}/{lib,demo,bin-Linux}}
 install -d $RPM_BUILD_ROOT{%{_examplesdir}/%{name},%{_mandir}/man1}
 
 install man/man1/* $RPM_BUILD_ROOT%{_mandir}/man1
-install uppaal2k.jar $RPM_BUILD_ROOT%{_libdir}/%{name}
+install uppaal.jar $RPM_BUILD_ROOT%{_libdir}/%{name}
 install demo/* $RPM_BUILD_ROOT%{_libdir}/%{name}/demo
 install lib/* $RPM_BUILD_ROOT%{_libdir}/%{name}/lib
 install bin-Linux/* $RPM_BUILD_ROOT%{_libdir}/%{name}/bin-Linux
@@ -42,7 +42,7 @@ install bin-Linux/* $RPM_BUILD_ROOT%{_libdir}/%{name}/bin-Linux
 cat <<EOF >$RPM_BUILD_ROOT%{_bindir}/uppaal
 #!/bin/sh
 
-JAR=%{_libdir}/%{name}/uppaal2k.jar
+JAR=%{_libdir}/%{name}/uppaal.jar
 ENGINE=%{_libdir}/%{name}/bin-Linux
 if [ "$DISPLAY" = ":0.0" ]; then
 	java -jar \$JAR -enginePath \$ENGINE \$*
@@ -56,7 +56,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc readme.txt README License-ASF
+%doc readme.txt README
 %attr(755,root,root) %{_bindir}/*
-%{_libdir}/%{name}
+%dir %{_libdir}/%{name}
+%dir %{_libdir}/%{name}/bin-Linux
+%dir %{_libdir}/%{name}/demo
+%dir %{_libdir}/%{name}/lib
+%{_libdir}/%{name}/*.jar
+%{_libdir}/%{name}/demo/*
+%{_libdir}/%{name}/lib/*.jar
+%attr(755, root, root) %{_libdir}/%{name}/bin-Linux/*
 %{_mandir}/man1/*
