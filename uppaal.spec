@@ -1,5 +1,5 @@
 Summary:	Environment for modeling, simulation and verification of real-time systems
-Summary(pl.UTF-8):   Środowisko do modelowania, symulacji i weryfikacji systemów czasu rzeczywistego
+Summary(pl.UTF-8):	Środowisko do modelowania, symulacji i weryfikacji systemów czasu rzeczywistego
 Name:		uppaal
 Version:	4.0.2
 Release:	0.1
