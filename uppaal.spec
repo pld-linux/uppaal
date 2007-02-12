@@ -1,5 +1,5 @@
 Summary:	Environment for modeling, simulation and verification of real-time systems
-Summary(pl):	¦rodowisko do modelowania, symulacji i weryfikacji systemów czasu rzeczywistego
+Summary(pl.UTF-8):   Åšrodowisko do modelowania, symulacji i weryfikacji systemÃ³w czasu rzeczywistego
 Name:		uppaal
 Version:	4.0.2
 Release:	0.1
@@ -19,11 +19,11 @@ Uppaal is an integrated tool environment for modeling, validation and
 verification of real-time systems modeled as networks of timed
 automata, extended with data types (bounded integers, arrays, etc.).
 
-%description -l pl
-Uppaal to zintegrowane ¶rodowisko narzêdzi do modelowania, sprawdzania
-poprawno¶ci i weryfikacji systemów czasu rzeczywistego modelowanych
-jako sieci automatów czasowych, rozszerzonych o typy danych
-(ograniczone liczby ca³kowite, tablice itp.).
+%description -l pl.UTF-8
+Uppaal to zintegrowane Å›rodowisko narzÄ™dzi do modelowania, sprawdzania
+poprawnoÅ›ci i weryfikacji systemÃ³w czasu rzeczywistego modelowanych
+jako sieci automatÃ³w czasowych, rozszerzonych o typy danych
+(ograniczone liczby caÅ‚kowite, tablice itp.).
 
 %prep
 %setup -q
