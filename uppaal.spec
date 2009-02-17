@@ -1,13 +1,13 @@
 Summary:	Environment for modeling, simulation and verification of real-time systems
 Summary(pl.UTF-8):	Środowisko do modelowania, symulacji i weryfikacji systemów czasu rzeczywistego
 Name:		uppaal
-Version:	4.0.2
-Release:	0.1
-License:	free for non-profit (non-distributable)
+Version:	4.0.7
+Release:	1
+License:	free for academia and private use (non-distributable)
 Group:		Development/Tools
 # http://www.docs.uu.se/docs/rtmv/uppaal/download.html
-Source0:	%{name}-%{version}.zip
-# NoSource0-md5:	6698f31403a6543d850e43d4a85025f4
+Source0:	%{name}-%{version}-aca.zip
+# NoSource0-md5:	20efdc9456c5934270ef6301bb1b88ea
 NoSource:	0
 URL:		http://www.uppaal.com/
 BuildRequires:	unzip
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc readme.txt README
+%doc readme.txt
 %attr(755,root,root) %{_bindir}/*
 %dir %{_libdir}/%{name}
 %dir %{_libdir}/%{name}/bin-Linux
