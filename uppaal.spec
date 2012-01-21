@@ -9,6 +9,7 @@ Group:		Development/Tools
 Source0:	%{name}-%{version}-aca.zip
 # NoSource0-md5:	20efdc9456c5934270ef6301bb1b88ea
 NoSource:	0
+# Academic URL:		http://www.uppaal.org/
 URL:		http://www.uppaal.com/
 BuildRequires:	unzip
 Requires:	jre > 1.5
